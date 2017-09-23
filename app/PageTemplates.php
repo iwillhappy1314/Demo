@@ -61,6 +61,13 @@ trait PageTemplates
 
     private function about_us()
     {
+	    $this->crud->addField([
+		    'name'     => 'author',
+		    'label'    => 'Author',
+		    'fake'     => true,
+		    'store_in' => 'extras',
+	    ]);
+
         $this->crud->addField([
                         'name'        => 'content',
                         'label'       => 'Content',
